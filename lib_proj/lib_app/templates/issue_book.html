@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Book</title>
+</head>
+<body>
+{% include "navbar_admin.html" %}
+<center style="margin-top:40px;">
+    <form method="post" class="form-horizontal">
+        {% csrf_token %}
+        <h2 style="font-size:40px;"><b>ISSUE BOOK</b></h2>
+        {% for field in form %}
+        <div>
+            <label style="margin-top:40px;">{{ field.label_tag }}</label>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <input type="submit" value="Issue" class="btn btn-primary" style="margin-top:50px;">
+    </form>
+</center>
+{% include "footer.html" %}
+</body>
+</html>

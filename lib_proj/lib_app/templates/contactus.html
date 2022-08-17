@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+</head>
+<body>
+{% include "navbar.html" %}
+<div>
+    <center>
+        <form method="post">{% csrf_token %}
+            <label><h5>Name</h5></label>
+            <div>{{form.name}}</div>
+            <br>
+            <label><h5>Email</h5></label>
+            <div>{{form.email}}</div>
+            <br>
+            <label><h5>Message</h5></label>
+            <div>{{form.message}}</div>
+            <br>
+            <input class="btn btn-primary" type="submit" value="Send message">
+        </form>
+    </center>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

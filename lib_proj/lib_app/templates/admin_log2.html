@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Welcome</title>
+</head>
+<body>
+{% include "navbar_admin.html" %}
+<h2 style="text-align:center;font-size:50px;">Hello {{c}} !</h2>
+<p style="text-align:center;font-size:30px;">As you are an Admin,you can add a book to library, view available book in library, <br>issue books to students, view
+issued book to students and many more..!</p>
+<hr style="height:3px;">
+<br>
+<h6 style="text-align:center;font-size:25px;">Options available for you!</h6>
+<a class="btn btn-primary" href="http://127.0.0.1:8000/addbook/" style="margin-left:32pc;margin-top:10px;">Add Book to Library</a> <a class="btn btn-primary" href="http://127.0.0.1:8000/viewbook/"
+                                                                                         style="margin-top:10px;">View Available Book</a>
+<br>
+<a class="btn btn-primary" href="http://127.0.0.1:8000/issuebook/" style="margin-left:33pc;margin-top:10px;">Issue New Book</a> <a class="btn btn-primary"
+href="http://127.0.0.1:8000/viewissuedbook/" style="margin-top:10px;">View Issued Book</a>
+<br>
+<a class="btn btn-primary" href="http://127.0.0.1:8000/viewstudent/" style="margin-left:38pc;margin-top:10px;">View Student</a>
+<br>
+{% include "footer.html" %}
+</body>
+</html>

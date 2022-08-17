@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <style>
+        .a{
+        height: 100%;
+        background-color: #FFDEE9;
+        background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 53%, #ffffff 89%, #ffffff 100%);
+        margin-bottom:-35px;
+        }
+    </style>
+</head>
+<body>
+{% include "navbar.html" %}
+<div class="a">
+    <center>
+        <form method="post">
+            {% csrf_token %}
+            <h1 style="margin-top:60px;"><b>Admin Login</b></h1>
+            <br>
+            <label><h4>Username:</h4></label>
+            <div>{{form.uname}}</div>
+            <br>
+            <label><h4>Password:</h4></label>
+            <div>{{form.password}}</div>
+            <br>
+            <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+    </center>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

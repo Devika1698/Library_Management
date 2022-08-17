@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Welcome</title>
+</head>
+<body>
+{% include "navbar_student.html" %}
+<h2 style="text-align:center;font-size:50px;">Hello {{d}} !</h2>
+<p style="text-align:center;font-size:25px;">As you are a Student,you can see how many books you have taken from library and many more!</p>
+<hr style="height:3px;">
+<br>
+<h6 style="text-align:center;font-size:25px;">Options available for you!</h6>
+<a class="btn btn-primary" href="http://127.0.0.1:8000/viewissuedbookstud/" style="margin-left:38pc;margin-top:10px;">View Issued Book to You</a>
+<br>
+{% include "footer.html" %}
+</body>
+</html>

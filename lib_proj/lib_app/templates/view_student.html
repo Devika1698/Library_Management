@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Student</title>
+</head>
+<body>
+{% include "navbar_admin.html" %}
+<h1 ALIGN="center" style="margin-top:50px;margin-bottom:30px;"><b>LIST OF STUDENTS</b></h1>
+<table border="2" align="center" width="100%" height="100px;" style="text-align:center;border-collapse:collapse;">
+    <tr>
+        <th>Name</th>
+        <th>Enrollment</th>
+        <th>Branch</th>
+    </tr>
+
+    {% for i in viewstudent %}
+    <tr>
+        <td>{{i.fname}}</td>
+        <td>{{i.enroll}}</td>
+        <td>{{i.branch}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% include "footer.html" %}
+</body>
+</html>

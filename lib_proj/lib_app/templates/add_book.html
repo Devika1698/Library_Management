@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+{% include "navbar_admin.html" %}
+<center>
+    <form method="post">
+        {% csrf_token %}
+        <h1 style="margin-bottom:30px;"><b>Add Book to Library</b></h1>
+        <label><h4>Book Name:</h4></label>
+        <div>{{form.bookname}}</div>
+        <br>
+        <label><h4>ISBN:</h4></label>
+        <div>{{form.isbn}}</div>
+        <br>
+        <label><h4>Author:</h4></label>
+        <div>{{form.author}}</div>
+        <br>
+        <label><h4>Category:</h4></label>
+        <div>{{form.category}}</div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Add Book">
+    </form>
+</center>
+{% include "footer.html" %}
+</body>
+</html>

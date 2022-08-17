@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student SignUp</title>
+    <style>
+        center{
+        background-color: #FFDEE9;
+        background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 53%, #ffffff 89%, #ffffff 100%);
+        margin-bottom:-30px;
+        }
+    </style>
+</head>
+<body>
+{% include "navbar.html" %}
+<center>
+    <form method="post">
+        {% csrf_token %}
+        <br>
+        <h1><b>Student SignUp</b></h1>
+        <br>
+        <label><h4>First Name:</h4></label>
+        <div>{{form.fname}}</div>
+        <br>
+        <label><h4>Last Name:</h4></label>
+        <div>{{form.lname}}</div>
+        <br>
+        <label><h4>Username:</h4></label>
+        <div>{{form.uname}}</div>
+        <br>
+        <label><h4>Password:</h4></label>
+        <div>{{form.password}}</div>
+        <br>
+        <label><h4>Enrollment:</h4></label>
+        <div>{{form.enroll}}</div>
+        <br>
+        <label><h4>Branch:</h4></label>
+        <div>{{form.branch}}</div>
+        <br>
+        <input type="submit" value="Sign Up" class="btn btn-primary">
+    </form>
+</center>
+{% include "footer.html" %}
+</body>
+</html>
